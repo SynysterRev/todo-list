@@ -1,0 +1,186 @@
+body {
+  background-color: #FFC0CB;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  /* position: fixed; */
+}
+
+:root {
+  --pink-light: #ff7eb4;
+  --pink: #ff2581;
+}
+
+
+.restaurant-name {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  max-width: 50%;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 50px;
+  background-color: #FAF3E0;
+}
+
+nav button {
+  font-size: large;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+nav .icon:last-child{
+  margin-right: 25px;
+}
+
+* {
+  color: #333333;
+  margin: 0;
+}
+
+
+.fredoka-base {
+  font-family: "Fredoka", serif;
+  font-size: 3.5em;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.heart {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 5em;
+  height: 5em;
+}
+
+.heart-text {
+  position: absolute;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.icon {
+  fill: transparent;
+  stroke: #E6A700;
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+
+  svg {
+    overflow: visible;
+    width: 6rem;
+  }
+
+  .heart-main {
+    position: absolute;
+  }
+
+  .heart:hover {
+    fill: #C21807;
+  }
+}
+
+.about {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(400px, 1fr));
+  grid-template-rows: auto;
+  gap: 50px;
+  align-content: center;
+  padding: 50px;
+}
+
+.menu-item {
+  background-color: #FAF3E0;
+  height: 300px;
+  display: grid;
+  grid-template-areas: 
+  "name ."
+  "image image"
+  "description price";
+  border-radius: 15px;
+  gap: 15px;
+  padding: 15px;
+  align-items: center;
+  
+}
+
+#content {
+  flex:1;
+}
+
+.menu-item h2 {
+  grid-area: name;
+  margin: 0;
+}
+
+.menu-item img {
+  grid-area: image;
+  max-width: 100%;
+  height: 200px;
+  /* object-fit: cover; */
+  border-radius: 10px;
+}
+
+.menu-item p:nth-of-type(1) {
+  grid-area: description;
+  font-style: italic;
+}
+
+.menu-item p:nth-of-type(2) {
+  grid-area: price;
+  text-align: right;
+  font-weight: bold;
+}
