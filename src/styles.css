@@ -1,3 +1,26 @@
+@import "tailwindcss";
+
 * {
   margin: 0;
+}
+
+dialog {
+  @apply fixed p-8 border-4 inset-1/2 -translate-1/2 shadow-lg;
+}
+
+form input[type="text"],
+form input[type="date"] {
+  @apply w-[50ch] mb-5;
+}
+
+input {
+@apply border-2 focus:outline-none
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+.form-button {
+  @apply rounded-2xl py-2 px-4;
 }

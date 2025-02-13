@@ -7,10 +7,50 @@
     <title></title>
 </head>
 
-<body>
-    <header>        
-    </header>
+<body class="flex h-screen">
+    <div id="side-bar" class="h-full w-1/6 bg-gray-300 flex-col py-3 px-5">
+        <h1 class="text-center text-2xl font-bold underline pb-8">Projects</h1>
+        <button id="new-project-button" class="flex items-center hover:bg-amber-500 w-full px-1 rounded-xl h-11">
+            <img src="./assets/add-button.svg" alt="new project image button" class="w-8 h-8" />
+            <p class="pl-4">New project</p>
+        </button>
+        <div class="flex gap-2 hidden" id="new-project-name">
+            <input type="text" placeholder="Project name" id="project-name" class="w-2/3" />
+            <button class="mask bg-[url(./assets/cancel-button.svg)] bg-contain w-6 h-6 fill-amber-500" id="cancel-project-name"></button>
+            <button class="bg-[url(./assets/check-mark-button.svg)] bg-contain w-6 h-6 fill-amber-500" id="validate-project-name"></button>
+        </div>
+        <div id="projects-list"></div>
     </div>
+    <div id="content"></div>
+    <dialog id="dialog">
+        <h2 class="text-center font-bold text-xl pb-4">New task</h2>
+        <form id="dialogForm">
+            <div class="flex-col w-full">
+                <label for="name" class="font-bold">Title</label>
+                <input type="text" id="name" min="1" max="50" required />
+                <label for="description" class="font-bold">Description</label>
+                <input type="text" id="description" min="1" max="50" required />
+                <label for="due-date" class="font-bold">Due date</label>
+                <input type="date" id="due-date" name="due-date">
+                <legend class="font-bold pb-2">Priority</legend>
+                <div class="flex gap-8 pb-6">
+                    <label>
+                        <input type="radio" name="priority" value="low"> Low
+                    </label>
+                    <label>
+                        <input type="radio" name="priority" value="medium"> Medium
+                    </label>
+                    <label>
+                        <input type="radio" name="priority" value="high"> High
+                    </label>
+                </div>
+                <div class="flex justify-end gap-8">
+                    <button type="button" class="form-button bg-red-400 hover:bg-red-500">Cancel</button>
+                    <button type="submit" class="form-button bg-amber-400 hover:bg-amber-500">Create</button>
+                </div>
+            </div>
+        </form>
+    </dialog>
 </body>
 
 </html>
